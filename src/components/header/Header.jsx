@@ -4,10 +4,14 @@ import { MdNotifications, MdApps } from "react-icons/md";
 
 import "./_header.scss";
 
-const Header = () => {
+const Header = ({ onToggleSideBar }) => {
   return (
-    <div class="border border-danger header">
-      <FaBars className="header__menu" size={26} />
+    <div class="header">
+      <FaBars
+        className="header__menu"
+        size={26}
+        onClick={onToggleSideBar}
+      />
       <img
         src="http://pngimg.com/uploads/youtube/youtube_PNG2.png"
         alt="Youtube Logo"
