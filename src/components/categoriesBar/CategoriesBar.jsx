@@ -1,21 +1,7 @@
 import { useState } from "react";
 import "./_categoriesBar.scss";
 
-const keywords = [
-  "All",
-  "React Js",
-  "javascript",
-  "computer applications",
-  "comedies",
-  "scene",
-  "history",
-  "conversation",
-  "street food",
-  "podcasts",
-  "recently uploaded",
-  "watched",
-  "new to you",
-];
+import { keywords } from "./keywords";
 
 const CategoriesBar = () => {
   const [activeKeyword, setActiveKeyword] = useState("All");
@@ -29,7 +15,7 @@ const CategoriesBar = () => {
       {keywords.map((keyword, i) => (
         <span
           key={i}
-          onClick={onClickHandler.bind(null, keyword)}
+          onClick={() => onClickHandler(keyword)}
           className={activeKeyword === keyword ? "active" : ""}
         >
           {keyword}
