@@ -15,9 +15,12 @@ function App() {
 
   return (
     <>
-      <Header handleToggleSideBar={handleToggleSideBar} />
+      <Header onToggleSideBar={handleToggleSideBar} />
       <div className="app__container">
-        <SideBar sideBar={sideBar} handleToggleSideBar={handleToggleSideBar} />
+        <SideBar
+          onToggleSideBar={sideBar}
+          handleToggleSideBar={handleToggleSideBar}
+        />
         <Container fluid className="app__main border border-info">
           <HomeScreen />
         </Container>

@@ -9,10 +9,10 @@ import {
 } from "react-icons/md";
 import "./_sideBar.scss";
 
-const SideBar = ({ sideBar, handleToggleSideBar }) => {
+const SideBar = ({ onToggleSideBar, handleToggleSideBar }) => {
   return (
     <nav
-      className={sideBar ? "sidebar open" : "sidebar"}
+      className={onToggleSideBar ? "sidebar open" : "sidebar"}
       onClick={handleToggleSideBar}
     >
       <li>
