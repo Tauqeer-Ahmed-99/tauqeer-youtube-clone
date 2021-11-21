@@ -21,7 +21,7 @@ function App() {
           onToggleSideBar={sideBar}
           handleToggleSideBar={handleToggleSideBar}
         />
-        <Container fluid className="app__main border border-info">
+        <Container fluid className="app__main">
           <HomeScreen />
         </Container>
       </div>
