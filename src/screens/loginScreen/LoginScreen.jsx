@@ -29,7 +29,7 @@ const LoginScreen = () => {
           alt="Youtube Logo"
         />
         <button onClick={loginHandler}>Login with Google</button>
-        <p>Youtube Clone made with React and Youtube Data API.</p>
+        <p>Youtube Clone made with React and YouTube Data API.</p>
       </div>
     </div>
   );

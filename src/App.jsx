@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from "react";
-
+import { useSelector } from "react-redux";
+import { useHistory } from "react-router";
 import { Container } from "react-bootstrap";
-
+import { Route, Switch, Redirect } from "react-router-dom";
 import Header from "./components/header/Header";
 import SideBar from "./components/sideBar/SideBar";
 import HomeScreen from "./screens/homeScreen/HomeScreen";
 import LoginScreen from "./screens/loginScreen/LoginScreen";
 
-import { Route, Switch, Redirect } from "react-router-dom";
-
 import "./_app.scss";
-import { useSelector } from "react-redux";
-import { useHistory } from "react-router";
+
 
 const Layout = ({ children }) => {
   const [sideBar, toggleSideBar] = useState(false);
@@ -63,6 +61,7 @@ const App = () => {
           <h1>Search Results</h1>
         </Layout>
       </Route>
+      
       <Route>
         <Redirect to="/" />
       </Route>
