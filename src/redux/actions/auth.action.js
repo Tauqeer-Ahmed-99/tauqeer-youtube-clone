@@ -39,3 +39,12 @@ export const login = () => async (dispatch) => {
     });
   }
 };
+
+export const logout = () => async (dispatch) => {
+  await auth.signOut;
+  dispatch({
+    type: actionTypes.LOG_OUT,
+  });
+  sessionStorage.removeItem("ytc-access-token");
+  sessionStorage.removeItem("ytc-user");
+};
